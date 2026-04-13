@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VASE — Verification And Synthesis, Edinburgh</title>
+    <meta
+      name="description"
+      content="VASE — Verification And Synthesis, Edinburgh. A research group at the University of Edinburgh led by Dr Elizabeth Polgreen, working on formal program synthesis and automated verification."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      ============================================================
+      This file is a STRUCTURAL SHELL ONLY.
+      Editable content lives in the data files:
+        config.js    — site meta, about, research, join, footer
+        people.js    — PI and PhD students
+        news.js      — news feed
+        artifacts.js — papers, code, slides, videos
+      Edit those, not this file, when updating content.
+      ============================================================
+    -->
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="#top" class="nav__brand">
+          <span class="nav__mark">φ</span>
+          <span id="brand-name">Synthesis And Verification, Edinburgh</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="artifacts.html">Artifacts</a></li>
+          <li><a href="#join">Join us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="container">
+        <span class="eyebrow hero__eyebrow" id="hero-eyebrow"></span>
+        <h1 class="display-hero" id="hero-headline"></h1>
+        <p class="lede hero__sub" id="hero-subhead"></p>
+        <div class="hero__ctas">
+          <a class="btn" href="#research"><span class="btn__label" data-label="Explore our research">Explore our research</span></a>
+          <a class="btn btn--ghost" href="#join"><span class="btn__label" data-label="PhD opportunities">PhD opportunities</span></a>
+        </div>
+        <div class="hero__meta" id="hero-stats"></div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div>
+            <span class="eyebrow">About the group</span>
+            <h2
+              class="section-heading"
+              id="about-heading"
+              style="margin-top: 20px;"
+            ></h2>
+          </div>
+          <div id="about-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research" id="research">
+      <div id="research-mount"></div>
+    </section>
+
+    <!-- PEOPLE -->
+    <section class="people" id="people">
+      <div class="container">
+        <div class="people__header">
+          <div>
+            <span class="eyebrow">The team</span>
+            <h2 class="section-heading" style="margin-top: 20px;">
+              People behind the proofs.
+            </h2>
+          </div>
+          <p class="lede" style="margin: 0;">
+            One group lead and PhD researchers, co-supervised across Informatics.
+          </p>
+        </div>
+
+        <!-- lead card -->
+        <article class="lead-card">
+          <img id="lead-photo" class="lead-card__photo" alt="" />
+          <div>
+            <div class="lead-card__role" id="lead-role"></div>
+            <h3 id="lead-name"></h3>
+            <p
+              class="mono"
+              id="lead-title"
+              style="font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;"
+            ></p>
+            <p id="lead-bio"></p>
+            <div class="lead-card__links" id="lead-links"></div>
+          </div>
+        </article>
+
+        <h3
+          id="students"
+          class="feature-title"
+          style="margin: 32px 0 20px; scroll-margin-top: 100px;"
+        >
+          <span
+            class="mono"
+            style="color: var(--warm-charcoal); font-size: 12px; text-transform: uppercase; letter-spacing: 1.08px;"
+            >PhD researchers</span
+          >
+        </h3>
+        <div class="students-grid" id="students-mount"></div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news">
+      <div class="container">
+        <span class="eyebrow">Recent activity</span>
+        <h2 class="section-heading" style="margin-top: 20px;">
+          What the group is up to.
+        </h2>
+        <p class="lede" style="margin-bottom: 40px;">
+          Recent publications, grants and talks.
+        </p>
+        <div class="news-list" id="news-mount"></div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="join" id="join">
+      <span class="eyebrow">Open positions</span>
+      <h2
+        class="section-heading"
+        id="join-heading"
+        style="margin-top: 20px;"
+      ></h2>
+      <p id="join-body"></p>
+      <div class="hero__ctas" id="join-ctas"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__lockup" id="footer-lockup"></div>
+          <p class="footer__note" id="footer-blurb"></p>
+        </div>
+        <div id="footer-columns" style="display: contents;"></div>
+      </div>
+      <div class="footer__bottom">
+        <span id="footer-copyright"></span>
+        <span id="footer-tagline"></span>
+      </div>
+    </footer>
+
+    <!-- data & rendering -->
+    <script src="config.js"></script>
+    <script src="people.js"></script>
+    <script src="news.js"></script>
+    <script src="artifacts.js"></script>
+    <script src="render.js"></script>
+  </body>
+</html>

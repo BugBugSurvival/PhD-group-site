@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artifacts — VASE</title>
+    <meta
+      name="description"
+      content="Code, slides, papers and videos from VASE — Verification And Synthesis, Edinburgh."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      Artifacts sub-page. Like index.html, this is a shell — the
+      actual list of artifacts is in artifacts.js. Edit that file,
+      not this one.
+    -->
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html#top" class="nav__brand">
+          <span class="nav__mark">φ</span>
+          <span id="brand-name">Synthesis And Verification, Edinburgh</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="index.html#people">People</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="artifacts.html" aria-current="page">Artifacts</a></li>
+          <li><a href="index.html#join">Join us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="container">
+        <span class="eyebrow">Code · Slides · Papers · Videos</span>
+        <h1 class="display-secondary" style="margin: 28px 0;">
+          Artifacts from our research.
+        </h1>
+        <p class="lede">
+          Every paper, slide deck, video and code release the group has
+          produced — the raw output of our work, free to read, cite and reuse.
+        </p>
+      </div>
+    </header>
+
+    <!-- ARTIFACT GRID -->
+    <section>
+      <div class="container">
+        <div class="artifact-grid" id="artifacts-mount"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__lockup" id="footer-lockup"></div>
+          <p class="footer__note" id="footer-blurb"></p>
+        </div>
+        <div id="footer-columns" style="display: contents;"></div>
+      </div>
+      <div class="footer__bottom">
+        <span id="footer-copyright"></span>
+        <span id="footer-tagline"></span>
+      </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="people.js"></script>
+    <script src="news.js"></script>
+    <script src="artifacts.js"></script>
+    <script src="render.js"></script>
+  </body>
+</html>
