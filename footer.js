@@ -11,12 +11,12 @@ window.SITE.footer = {
     {
       title: "Explore",
       links: [
-        { label: "About", href: "index.html#about" },
-        { label: "Research", href: "index.html#research" },
-        { label: "People", href: "index.html#people" },
-        { label: "News", href: "index.html#news" },
-        { label: "Artefacts", href: "index.html#artefacts" },
-        { label: "Join us", href: "index.html#join" },
+        { label: "About", href: "#about" },
+        { label: "Research", href: "#research" },
+        { label: "People", href: "#people" },
+        { label: "News", href: "#news" },
+        { label: "Artefacts", href: "#artefacts" },
+        { label: "Join us", href: "#join" },
       ],
     },
     {

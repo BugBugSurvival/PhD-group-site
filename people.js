@@ -76,14 +76,14 @@ window.SITE.students = [
     initials: "AB",
     color: "slushie",
     years: "2021 — present",
-    bio: 'Main supervisor <a href="https://www.dcs.ed.ac.uk/home/mob/">Prof. Mike O\'Boyle</a>. Tensorize lead author; CGO 2025 Distinguished Paper.',
+    bio: 'Main supervisor <a href="https://www.dcs.ed.ac.uk/home/mob/">Prof. Mike O\'Boyle</a>.',
   },
   {
     name: "José Wesley de Souza Magalhães",
     initials: "JM",
     color: "ube",
     years: "2021 — present",
-    bio: 'Main supervisor <a href="https://www.dcs.ed.ac.uk/home/mob/">Prof. Mike O\'Boyle</a>. Automatic lifting of C to tensor DSLs.',
+    bio: 'Main supervisor <a href="https://www.dcs.ed.ac.uk/home/mob/">Prof. Mike O\'Boyle</a>.',
   },
   {
     name: "Guy Frankel",
