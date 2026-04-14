@@ -294,7 +294,7 @@ code,
   background: var(--ube-800);
   color: var(--white);
   border-color: var(--ube-800);
-  transform: rotateZ(-4deg) translateY(-2px);
+  /* transform: rotateZ(-4deg) translateY(-2px); */
   box-shadow: var(--card-shadow);
 }
 
@@ -316,7 +316,7 @@ code,
   background: var(--pom-400);
   color: var(--white);
   border-color: var(--pom-400);
-  transform: rotateZ(-4deg) translateY(-2px);
+  /* transform: rotateZ(-4deg) translateY(-2px); */
   box-shadow: var(--card-shadow);
 }
 
