@@ -57,7 +57,7 @@ window.SITE.students = [
     name: "Yixuan Li",
     initials: "YL",
     color: "matcha",
-    years: "2021 — 2025",
+    years: "2022 — 2025",
     bio: 'Co-supervised with <a href="https://www.dcs.ed.ac.uk/home/mob/">Prof. Mike O\'Boyle</a>. Works on LLM-guided synthesis and grammar generation.',
     photo: "assets/people/yixuan.jpeg",
     links: [
