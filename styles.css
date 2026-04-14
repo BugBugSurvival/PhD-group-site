@@ -436,7 +436,7 @@ code,
   margin-bottom: 16px;
 }
 
-.about p + p {
+.about p+p {
   color: var(--warm-charcoal);
 }
 
@@ -671,11 +671,25 @@ code,
   border-bottom: 1px dashed var(--oat);
 }
 
-.student-card--matcha::before { background: var(--matcha-300); }
-.student-card--slushie::before { background: var(--slushie-500); }
-.student-card--ube::before { background: var(--ube-300); }
-.student-card--pom::before { background: var(--pom-400); }
-.student-card--lemon::before { background: var(--lemon-400); }
+.student-card--matcha::before {
+  background: var(--matcha-300);
+}
+
+.student-card--slushie::before {
+  background: var(--slushie-500);
+}
+
+.student-card--ube::before {
+  background: var(--ube-300);
+}
+
+.student-card--pom::before {
+  background: var(--pom-400);
+}
+
+.student-card--lemon::before {
+  background: var(--lemon-400);
+}
 
 .student-card__avatar {
   position: relative;
@@ -721,7 +735,7 @@ code,
 .student-card__sup a,
 .lead-card p a,
 .about p a,
-.artifact-card__desc a {
+.artefact-card__desc a {
   color: var(--matcha-600);
   text-decoration: underline;
   text-decoration-color: var(--matcha-300);
@@ -731,7 +745,7 @@ code,
 .student-card__sup a:hover,
 .lead-card p a:hover,
 .about p a:hover,
-.artifact-card__desc a:hover {
+.artefact-card__desc a:hover {
   color: var(--ube-800);
   text-decoration-color: var(--ube-300);
 }
@@ -756,15 +770,15 @@ code,
   letter-spacing: 0.9px;
 }
 
-/* ------------------ Artifacts ------------------ */
-.artifact-grid {
+/* ------------------ artefacts ------------------ */
+.artefact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 16px;
 }
 
-.artifact-card {
+.artefact-card {
   position: relative;
   background: var(--white);
   border: 1px solid var(--oat);
@@ -778,12 +792,12 @@ code,
   transition: transform 220ms ease, background-color 220ms ease;
 }
 
-.artifact-card:hover {
+.artefact-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--card-shadow);
 }
 
-.artifact-card::before {
+.artefact-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -793,13 +807,27 @@ code,
   background: var(--matcha-300);
 }
 
-.artifact-card--matcha::before { background: var(--matcha-300); }
-.artifact-card--slushie::before { background: var(--slushie-500); }
-.artifact-card--ube::before { background: var(--ube-300); }
-.artifact-card--pom::before { background: var(--pom-400); }
-.artifact-card--lemon::before { background: var(--lemon-400); }
+.artefact-card--matcha::before {
+  background: var(--matcha-300);
+}
 
-.artifact-card__kind {
+.artefact-card--slushie::before {
+  background: var(--slushie-500);
+}
+
+.artefact-card--ube::before {
+  background: var(--ube-300);
+}
+
+.artefact-card--pom::before {
+  background: var(--pom-400);
+}
+
+.artefact-card--lemon::before {
+  background: var(--lemon-400);
+}
+
+.artefact-card__kind {
   font-family: "Space Mono", monospace;
   font-size: 11px;
   text-transform: uppercase;
@@ -814,14 +842,14 @@ code,
   margin-bottom: 4px;
 }
 
-.artifact-card__title {
+.artefact-card__title {
   font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.44px;
   line-height: 1.2;
 }
 
-.artifact-card__meta {
+.artefact-card__meta {
   font-family: "Space Mono", monospace;
   font-size: 11px;
   text-transform: uppercase;
@@ -829,20 +857,20 @@ code,
   color: var(--warm-charcoal);
 }
 
-.artifact-card__authors {
+.artefact-card__authors {
   font-size: 13px;
   color: var(--warm-charcoal);
   font-style: italic;
 }
 
-.artifact-card__desc {
+.artefact-card__desc {
   font-size: 15px;
   line-height: 1.5;
   color: var(--warm-charcoal);
   margin-top: 2px;
 }
 
-.artifact-card__links {
+.artefact-card__links {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -850,16 +878,21 @@ code,
   padding-top: 12px;
 }
 
-.artifact-card__links .pill-link {
+.artefact-card__links .pill-link {
   padding: 5px 12px;
   font-size: 11px;
 }
 
 @media (max-width: 991px) {
-  .artifact-grid { grid-template-columns: repeat(2, 1fr); }
+  .artefact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 599px) {
-  .artifact-grid { grid-template-columns: 1fr; }
+  .artefact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ------------------ Publications / News ------------------ */
@@ -916,10 +949,23 @@ code,
   background: var(--lemon-400);
 }
 
-.tag--matcha { background: var(--matcha-300); }
-.tag--slushie { background: var(--slushie-500); color: var(--white); }
-.tag--ube { background: var(--ube-300); }
-.tag--pom { background: var(--pom-400); color: var(--white); }
+.tag--matcha {
+  background: var(--matcha-300);
+}
+
+.tag--slushie {
+  background: var(--slushie-500);
+  color: var(--white);
+}
+
+.tag--ube {
+  background: var(--ube-300);
+}
+
+.tag--pom {
+  background: var(--pom-400);
+  color: var(--white);
+}
 
 /* ------------------ Join ------------------ */
 .join {
@@ -1010,16 +1056,20 @@ code,
 
 /* ------------------ Responsive ------------------ */
 @media (max-width: 991px) {
+
   .hero__meta,
   .topic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .students-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .about__grid {
     grid-template-columns: 1fr;
   }
+
   .footer__inner {
     grid-template-columns: 1fr 1fr;
   }
@@ -1029,42 +1079,52 @@ code,
   section {
     padding: 64px 0;
   }
+
   .nav__links {
     display: none;
   }
+
   .colorblock {
     margin: 32px 16px;
     border-radius: 32px;
   }
+
   .colorblock .container {
     padding: 0 28px;
   }
+
   .lead-card {
     grid-template-columns: 1fr;
     padding: 28px;
   }
+
   .lead-card__photo {
     width: 160px;
     height: 160px;
   }
+
   .students-grid,
   .topic-grid,
   .hero__meta {
     grid-template-columns: 1fr 1fr;
   }
+
   .news-item {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
   .join,
   .footer {
     margin: 32px 16px;
     padding: 40px 28px;
     border-radius: 32px;
   }
+
   .footer__inner {
     grid-template-columns: 1fr;
   }
+
   .footer__bottom {
     flex-direction: column;
     gap: 8px;
@@ -1072,6 +1132,7 @@ code,
 }
 
 @media (max-width: 479px) {
+
   .students-grid,
   .topic-grid,
   .hero__meta {
