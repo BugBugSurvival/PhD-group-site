@@ -1,9 +1,8 @@
 /* =============================================================
    RENDERING — you should not need to edit this file.
    Reads window.SITE (populated by config.js, people.js, news.js,
-   and artefacts.js) and populates each page. Works on both
-   index.html and artefacts.html — sections only render if their
-   mount point exists on the current page.
+   and artefacts.js) and populates each page. Sections only
+   render if their mount point exists on the current page.
    ============================================================= */
 (function () {
   const S = window.SITE;

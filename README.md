@@ -12,14 +12,13 @@ it, refresh the browser.
 ```
 group-site/
 ├── index.html        ← home page shell (do not edit for content)
-├── artifacts.html    ← artifacts sub-page shell (do not edit for content)
 ├── styles.css        ← all visual styling / design system
 ├── render.js         ← rendering engine — reads data files into the page
 │
 ├── config.js         ← ⭐ site meta, about, research, join, footer
 ├── people.js         ← ⭐ PI and PhD students
 ├── news.js           ← ⭐ news feed
-├── artifacts.js      ← ⭐ papers, code, slides, videos
+├── artefacts.js      ← ⭐ papers, code, slides, videos
 │
 ├── README.md         ← this file
 │
@@ -32,10 +31,10 @@ group-site/
 contain plain JavaScript arrays and objects — no HTML, no CSS. Each file has a
 big comment header at the top explaining its fields.
 
-`index.html` and `artifacts.html` are "shells": they define section structure
-and mount points, and `render.js` fills them with data from the four data files
+`index.html` is a "shell": it definef section structure
+and mount points, and `render.js` fills it with data from the four data files
 when the page loads. Unless you are changing the overall page layout, leave
-both HTML files and `render.js` alone.
+both the HTML file and `render.js` alone.
 
 ---
 
@@ -122,9 +121,9 @@ remove the trailing comma if you delete the last entry.
 The hero "PhD researchers" stat at the top of the page shows the count
 automatically using `{{studentCount}}` — do not hardcode the number.
 
-### 4.3 Add an artifact (paper, code, slides, video)
+### 4.3 Add an artefact (paper, code, slides, video)
 
-Open `artifacts.js` and add an entry to the `SITE.artifacts` array:
+Open `artefacts.js` and add an entry to the `SITE.artefacts` array:
 
 ```js
 {
@@ -143,7 +142,7 @@ Open `artifacts.js` and add an entry to the `SITE.artifacts` array:
 ```
 
 The `kind` field automatically picks a colored side stripe, so you never pick
-a color manually. The entry appears on `artifacts.html` in array order.
+a color manually. The entry appears on the main page in array order.
 
 ### 4.4 Edit hero copy, research themes, footer, or "Join us"
 
@@ -182,7 +181,7 @@ the PI and ~68px for students.
 ## 5. Colors you can use
 
 Whenever a `color` field appears (news items, research themes, student cards,
-artifact kinds), use one of these swatch keys:
+artefact kinds), use one of these swatch keys:
 
 | key       | rough tone       |
 | --------- | ---------------- |
@@ -227,7 +226,7 @@ These fields all accept HTML, so you can add links and emphasis directly:
 - `news.js` → `body`
 - `people.js` → student `bio`, lead `bio`
 - `config.js` → `about.paragraphs`, `footer.blurb`, `footer.tagline`
-- `artifacts.js` → `description`
+- `artefacts.js` → `description`
 
 Useful snippets:
 
@@ -244,16 +243,16 @@ HTML is **not** supported in short plain-text fields like `name`, `title`,
 
 ## 7. How the plumbing actually works
 
-When the browser loads `index.html` or `artifacts.html`, this happens:
+When the browser loads `index.html`, this happens:
 
 1. The HTML file defines the section structure and loads the four data files
-   (`config.js`, `people.js`, `news.js`, `artifacts.js`) followed by
+   (`config.js`, `people.js`, `news.js`, `artefacts.js`) followed by
    `render.js`.
 2. Each data file sets keys on a shared `window.SITE` object — e.g.
    `window.SITE.news = [...]`. They can be loaded in any order.
 3. `render.js` reads `window.SITE` and populates the page. Each section
    checks whether its mount point exists before rendering, so the same
-   `render.js` works on both the home page and the artifacts sub-page.
+   `render.js` works on both the home page and the artefacts sub-page.
 
 If a section appears empty on the site:
 
@@ -288,7 +287,7 @@ If a section appears empty on the site:
 
   Data-driven CTAs (e.g. the Join section) are wrapped automatically by
   `render.js` — you only need to worry about this if you edit `index.html`
-  or `artifacts.html` directly.
+  directly.
 
 ---
 
@@ -299,14 +298,14 @@ If a section appears empty on the site:
 | Add a news item                      | `news.js`      |
 | Add / remove / update a PhD student  | `people.js`    |
 | Update the PI's bio or links         | `people.js`    |
-| Add a paper / code / slides / video  | `artifacts.js` |
+| Add a paper / code / slides / video  | `artefacts.js` |
 | Change the group name or hero copy   | `config.js`    |
 | Edit the research themes             | `config.js`    |
 | Edit footer copy / links / tagline   | `config.js`    |
 | Edit the "Want to do a PhD?" section | `config.js`    |
 | Add a photo                          | `assets/`      |
 | Change the overall visual design     | `styles.css`   |
-| Change the page layout / sections    | `index.html` / `artifacts.html` |
+| Change the page layout / sections    | `index.html`   |
 | Change the rendering logic           | `render.js`    |
 
 ---
