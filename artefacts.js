@@ -18,7 +18,11 @@
      - tags:        array of strings for filtering/search (optional)
 
    Sibling data files (edit these to update content):
-     config.js      — site meta, about, research, join, footer
+     site-meta.js   — site meta / hero
+     about.js       — about section paragraphs
+     research.js    — research themes and topic cards
+     join.js        — "Join us" CTA section
+     footer.js      — footer blurb, columns, copyright
      people.js      — PI and PhD students
      news.js        — news feed
      artefacts.js   — this file: papers, code, slides, videos

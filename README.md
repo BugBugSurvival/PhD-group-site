@@ -15,7 +15,11 @@ group-site/
 ├── styles.css        ← all visual styling / design system
 ├── render.js         ← rendering engine — reads data files into the page
 │
-├── config.js         ← ⭐ site meta, about, research, join, footer
+├── site-meta.js      ← ⭐ group name, hero headline, stats
+├── about.js          ← ⭐ about section paragraphs
+├── research.js       ← ⭐ research themes & topic cards
+├── join.js           ← ⭐ "Join us" CTA section
+├── footer.js         ← ⭐ footer blurb, columns, copyright
 ├── people.js         ← ⭐ PI and PhD students
 ├── news.js           ← ⭐ news feed
 ├── artefacts.js      ← ⭐ papers, code, slides, videos
@@ -27,12 +31,12 @@ group-site/
     └── ...           ← any other images
 ```
 
-**The four starred files are the only ones you normally need to edit.** They
+**The starred files are the only ones you normally need to edit.** They
 contain plain JavaScript arrays and objects — no HTML, no CSS. Each file has a
 big comment header at the top explaining its fields.
 
-`index.html` is a "shell": it definef section structure
-and mount points, and `render.js` fills it with data from the four data files
+`index.html` is a "shell": it defines section structure
+and mount points, and `render.js` fills it with data from the data files
 when the page loads. Unless you are changing the overall page layout, leave
 both the HTML file and `render.js` alone.
 
@@ -146,13 +150,13 @@ a color manually. The entry appears on the main page in array order.
 
 ### 4.4 Edit hero copy, research themes, footer, or "Join us"
 
-All of this lives in `config.js`. The file has five labelled sections:
+These live in five separate data files, one per section:
 
-1. **`SITE.meta`** — group name, hero headline, eyebrow, subhead, stats.
-2. **`SITE.about`** — the "About the group" heading and paragraphs.
-3. **`SITE.research`** — the three colored research themes and their topic cards.
-4. **`SITE.join`** — the pink "Want to do a PhD?" call-to-action.
-5. **`SITE.footer`** — footer blurb, link columns, copyright, tagline.
+1. **`site-meta.js`** → `SITE.meta` — group name, hero headline, eyebrow, subhead, stats.
+2. **`about.js`** → `SITE.about` — the "About the group" heading and paragraphs.
+3. **`research.js`** → `SITE.research` — the three colored research themes and their topic cards.
+4. **`join.js`** → `SITE.join` — the pink "Want to do a PhD?" call-to-action.
+5. **`footer.js`** → `SITE.footer` — footer blurb, link columns, copyright, tagline.
 
 A few specifics:
 
@@ -225,7 +229,8 @@ These fields all accept HTML, so you can add links and emphasis directly:
 
 - `news.js` → `body`
 - `people.js` → student `bio`, lead `bio`
-- `config.js` → `about.paragraphs`, `footer.blurb`, `footer.tagline`
+- `about.js` → `about.paragraphs`
+- `footer.js` → `footer.blurb`, `footer.tagline`
 - `artefacts.js` → `description`
 
 Useful snippets:
@@ -245,9 +250,9 @@ HTML is **not** supported in short plain-text fields like `name`, `title`,
 
 When the browser loads `index.html`, this happens:
 
-1. The HTML file defines the section structure and loads the four data files
-   (`config.js`, `people.js`, `news.js`, `artefacts.js`) followed by
-   `render.js`.
+1. The HTML file defines the section structure and loads the data files
+   (`site-meta.js`, `about.js`, `research.js`, `join.js`, `footer.js`,
+   `people.js`, `news.js`, `artefacts.js`) followed by `render.js`.
 2. Each data file sets keys on a shared `window.SITE` object — e.g.
    `window.SITE.news = [...]`. They can be loaded in any order.
 3. `render.js` reads `window.SITE` and populates the page. Each section
@@ -299,10 +304,11 @@ If a section appears empty on the site:
 | Add / remove / update a PhD student  | `people.js`    |
 | Update the PI's bio or links         | `people.js`    |
 | Add a paper / code / slides / video  | `artefacts.js` |
-| Change the group name or hero copy   | `config.js`    |
-| Edit the research themes             | `config.js`    |
-| Edit footer copy / links / tagline   | `config.js`    |
-| Edit the "Want to do a PhD?" section | `config.js`    |
+| Change the group name or hero copy   | `site-meta.js` |
+| Edit the about paragraphs            | `about.js`     |
+| Edit the research themes             | `research.js`  |
+| Edit footer copy / links / tagline   | `footer.js`    |
+| Edit the "Want to do a PhD?" section | `join.js`      |
 | Add a photo                          | `assets/`      |
 | Change the overall visual design     | `styles.css`   |
 | Change the page layout / sections    | `index.html`   |

@@ -26,7 +26,11 @@
                    under the bio. Omit or leave empty for no links.
 
    Sibling data files (edit these to update content):
-     config.js      — site meta, about, research, join, footer
+     site-meta.js   — site meta / hero
+     about.js       — about section paragraphs
+     research.js    — research themes and topic cards
+     join.js        — "Join us" CTA section
+     footer.js      — footer blurb, columns, copyright
      people.js      — this file: PI and PhD students
      news.js        — news feed
      artefacts.js   — papers, code, slides, videos

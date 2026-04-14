@@ -1,14 +1,15 @@
 /* =============================================================
    RENDERING — you should not need to edit this file.
-   Reads window.SITE (populated by config.js, people.js, news.js,
-   and artefacts.js) and populates each page. Sections only
-   render if their mount point exists on the current page.
+   Reads window.SITE (populated by site-meta.js, about.js,
+   research.js, join.js, footer.js, people.js, news.js and
+   artefacts.js) and populates each page. Sections only render
+   if their mount point exists on the current page.
    ============================================================= */
 (function () {
   const S = window.SITE;
   if (!S) {
     console.error(
-      "window.SITE is missing — check that config.js / people.js / news.js / artefacts.js loaded before render.js."
+      "window.SITE is missing — check that the data files (site-meta.js, about.js, research.js, join.js, footer.js, people.js, news.js, artefacts.js) loaded before render.js."
     );
     return;
   }
