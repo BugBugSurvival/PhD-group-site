@@ -398,11 +398,14 @@ code,
 }
 
 .meta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
+}
+
+a.meta-card:hover {
   background: var(--lemon-400);
   border-style: solid;
   border-color: var(--lemon-700);
-  transform: translateY(-4px);
-  box-shadow: var(--card-shadow);
 }
 
 .meta-card__label {
