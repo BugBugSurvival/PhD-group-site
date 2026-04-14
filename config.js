@@ -12,7 +12,7 @@
      config.js      — this file: site meta, about, research, join, footer
      people.js      — PI and PhD students
      news.js        — news feed
-     artifacts.js   — papers, code, slides, videos
+     artefacts.js   — papers, code, slides, videos
 
    Swatch color keys you can use anywhere a `color` field appears:
      "matcha" | "slushie" | "ube" | "pom" | "lemon"
@@ -31,7 +31,7 @@ window.SITE.meta = {
   // Hero headline. Use {{accent:...}} for the yellow pill and
   // {{green:...}} for green emphasis.
   headline:
-    "Building {{accent:trustworthy}} software through {{green:Synthesis And Verification}}.",
+    "Building {{accent:trustworthy}} software through {{green:Synthesis and Verification}}.",
   // One-paragraph description under the headline
   subhead:
     "VASE — Verification And Synthesis, Edinburgh — is a research group at the University of Edinburgh working on formal program synthesis, automated verification, and the use of machine learning to make both scale. Led by Dr Elizabeth Polgreen.",
@@ -174,7 +174,7 @@ window.SITE.footer = {
         { label: "Research", href: "index.html#research" },
         { label: "People", href: "index.html#people" },
         { label: "News", href: "index.html#news" },
-        { label: "Artifacts", href: "artifacts.html" },
+        { label: "Artefacts", href: "index.html#artefacts" },
         { label: "Join us", href: "index.html#join" },
       ],
     },

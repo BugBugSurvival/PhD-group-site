@@ -1,5 +1,5 @@
 /* =============================================================
-   artifacts.js — the group's dataset of outputs.
+   artefacts.js — the group's dataset of outputs.
    -------------------------------------------------------------
    This file is a plain list. To add a new paper, slide deck,
    code release, video or dataset, add one entry to the array
@@ -21,11 +21,11 @@
      config.js      — site meta, about, research, join, footer
      people.js      — PI and PhD students
      news.js        — news feed
-     artifacts.js   — this file: papers, code, slides, videos
+     artefacts.js   — this file: papers, code, slides, videos
    ============================================================= */
 
 window.SITE = window.SITE || {};
-window.SITE.artifacts = [
+window.SITE.artefacts = [
   {
     title: "PolyVer",
     kind: "paper",
@@ -48,7 +48,7 @@ window.SITE.artifacts = [
     description:
       "Fast synthesis of tensor programs from legacy code using symbolic tracing, sketching and solving.",
     links: [
-      { label: "Paper",  href: "https://dl.acm.org/doi/10.1145/3696443.3708956" },
+      { label: "Paper", href: "https://dl.acm.org/doi/10.1145/3696443.3708956" },
       { label: "GitHub", href: "https://github.com/alexanderb14/tensorize" },
     ],
     tags: ["synthesis", "tensors", "lifting"],

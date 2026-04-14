@@ -1,15 +1,14 @@
 /* =============================================================
    RENDERING — you should not need to edit this file.
    Reads window.SITE (populated by config.js, people.js, news.js,
-   and artifacts.js) and populates each page. Works on both
-   index.html and artifacts.html — sections only render if their
-   mount point exists on the current page.
+   and artefacts.js) and populates each page. Sections only
+   render if their mount point exists on the current page.
    ============================================================= */
 (function () {
   const S = window.SITE;
   if (!S) {
     console.error(
-      "window.SITE is missing — check that config.js / people.js / news.js / artifacts.js loaded before render.js."
+      "window.SITE is missing — check that config.js / people.js / news.js / artefacts.js loaded before render.js."
     );
     return;
   }
@@ -136,8 +135,8 @@
               theme.color === "slushie"
                 ? "color:var(--slushie-800);"
                 : theme.color === "ube"
-                ? "color:var(--ube-800);"
-                : "",
+                  ? "color:var(--ube-800);"
+                  : "",
             text: t.tag,
           }),
           h("h3", { text: t.title }),
@@ -167,10 +166,10 @@
     S.students.forEach((st) => {
       const avatar = st.photo
         ? h("img", {
-            class: "student-card__avatar student-card__avatar--photo",
-            src: st.photo,
-            alt: st.name,
-          })
+          class: "student-card__avatar student-card__avatar--photo",
+          src: st.photo,
+          alt: st.name,
+        })
         : h("div", { class: "student-card__avatar", text: st.initials });
 
       const children = [
@@ -213,8 +212,8 @@
     });
   }
 
-  /* ---------- 7. ARTIFACTS (artifacts.html only) ---------- */
-  if ($("#artifacts-mount")) {
+  /* ---------- 7. ARTEFACTS ---------- */
+  if ($("#artefacts-mount")) {
     const kindColor = {
       code: "matcha",
       slides: "lemon",
@@ -223,27 +222,27 @@
       dataset: "ube",
     };
 
-    const mount = $("#artifacts-mount");
-    S.artifacts.forEach((a) => {
+    const mount = $("#artefacts-mount");
+    S.artefacts.forEach((a) => {
       const color = kindColor[a.kind] || "matcha";
       const meta = [a.year, a.venue].filter(Boolean).join(" · ");
 
       const card = h(
         "article",
-        { class: `artifact-card artifact-card--${color}` },
+        { class: `artefact-card artefact-card--${color}` },
         [
-          h("div", { class: "artifact-card__kind", text: a.kind }),
-          h("h3", { class: "artifact-card__title", text: a.title }),
-          meta ? h("div", { class: "artifact-card__meta", text: meta }) : null,
+          h("div", { class: "artefact-card__kind", text: a.kind }),
+          h("h3", { class: "artefact-card__title", text: a.title }),
+          meta ? h("div", { class: "artefact-card__meta", text: meta }) : null,
           a.authors
-            ? h("div", { class: "artifact-card__authors", text: a.authors })
+            ? h("div", { class: "artefact-card__authors", text: a.authors })
             : null,
-          h("p", { class: "artifact-card__desc", html: a.description || "" }),
+          h("p", { class: "artefact-card__desc", html: a.description || "" }),
         ]
       );
 
       if (Array.isArray(a.links) && a.links.length) {
-        const row = h("div", { class: "artifact-card__links" });
+        const row = h("div", { class: "artefact-card__links" });
         a.links.forEach((l) => row.appendChild(makeLink("pill-link", l)));
         card.appendChild(row);
       }

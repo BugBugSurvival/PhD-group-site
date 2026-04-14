@@ -15,7 +15,7 @@
      config.js      — site meta, about, research, join, footer
      people.js      — PI and PhD students
      news.js        — this file: news feed
-     artifacts.js   — papers, code, slides, videos
+     artefacts.js   — papers, code, slides, videos
    ============================================================= */
 
 window.SITE = window.SITE || {};
