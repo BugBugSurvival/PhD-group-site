@@ -46,13 +46,13 @@ window.SITE.news = [
     date: "May 2025",
     tag: "ACL 2025",
     color: "pom",
-    body: "<strong>HyGenar: An LLM-Driven Hybrid Genetic Algorithm for Few-Shot Grammar Generation</strong> accepted at ACL Findings.",
+    body: "<strong><a href=\"https://aclanthology.org/2025.findings-acl.701/\">HyGenar: An LLM-Driven Hybrid Genetic Algorithm for Few-Shot Grammar Generation</a></strong> accepted at ACL Findings.",
   },
   {
     date: "Apr 2025",
     tag: "PLDI 2025",
     color: "lemon",
-    body: "<strong>Guided Tensor Lifting</strong> accepted at PLDI 2025. Presented by Yixuan Li.",
+    body: "<strong><a href=\"https://dl.acm.org/doi/abs/10.1145/3729330\">Guided Tensor Lifting</a></strong> accepted at PLDI 2025. Presented by Yixuan Li.",
   },
   {
     date: "Mar 2025",
@@ -64,7 +64,13 @@ window.SITE.news = [
     date: "Dec 2024",
     tag: "AAAI 2025",
     color: "slushie",
-    body: "<strong>Online Prompt Selection for Program Synthesis</strong> accepted at AAAI 2025, presented by Yixuan Li.",
+    body: "<strong><a href=\"https://ojs.aaai.org/index.php/AAAI/article/view/33227\">Online Prompt Selection for Program Synthesis</a></strong> accepted at AAAI 2025, presented by Yixuan Li.",
+  },
+  {
+    date: "Mar 2024",
+    tag: "CAV 2024",
+    color: "pom",
+    body: "<strong><a href=\"https://link.springer.com/chapter/10.1007/978-3-031-65630-9_15\">Guiding Enumerative Program Synthesis with Large Language Models</a></strong> accepted at CAV 2024. Yixuan Li is also presenting this work at the EuroProofNet workshop.",
   },
   {
     date: "Sep 2024",

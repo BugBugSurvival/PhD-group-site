@@ -773,6 +773,11 @@ a.meta-card:hover {
   letter-spacing: 0.9px;
 }
 
+.student-card__links .pill-link:hover {
+  background: var(--lemon-400);
+  border-color: var(--lemon-700);
+}
+
 /* ------------------ artefacts ------------------ */
 .artefact-grid {
   display: grid;
@@ -886,6 +891,11 @@ a.meta-card:hover {
   font-size: 11px;
 }
 
+.artefact-card__links .pill-link:hover {
+  background: var(--lemon-400);
+  border-color: var(--lemon-700);
+}
+
 @media (max-width: 991px) {
   .artefact-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -919,6 +929,26 @@ a.meta-card:hover {
 .news-item:hover {
   transform: translateY(-3px);
   box-shadow: var(--card-shadow);
+}
+
+.news-item:hover .news-item__body a {
+  text-decoration: underline;
+}
+
+.news-item--matcha:hover .news-item__body a {
+  color: var(--matcha-600);
+}
+.news-item--slushie:hover .news-item__body a {
+  color: var(--slushie-500);
+}
+.news-item--ube:hover .news-item__body a {
+  color: var(--ube-600);
+}
+.news-item--pom:hover .news-item__body a {
+  color: var(--pom-400);
+}
+.news-item--lemon:hover .news-item__body a {
+  color: var(--lemon-700);
 }
 
 .news-item__date {

@@ -200,16 +200,27 @@
   if ($("#news-mount")) {
     const newsMount = $("#news-mount");
     S.news.forEach((n) => {
-      newsMount.appendChild(
-        h("article", { class: "news-item" }, [
-          h("div", { class: "news-item__date", text: n.date }),
-          h("div", { class: "news-item__body" }, [
-            h("span", { class: `tag tag--${n.color}`, text: n.tag }),
-            document.createTextNode(" "),
-            h("span", { html: n.body }),
-          ]),
-        ])
-      );
+      const hrefMatch = n.body.match(/href="([^"]+)"/);
+      const attrs = { class: `news-item news-item--${n.color}` };
+      if (hrefMatch) {
+        attrs.style = "cursor:pointer;";
+        attrs.title = hrefMatch[1];
+      }
+      const article = h("article", attrs, [
+        h("div", { class: "news-item__date", text: n.date }),
+        h("div", { class: "news-item__body" }, [
+          h("span", { class: `tag tag--${n.color}`, text: n.tag }),
+          document.createTextNode(" "),
+          h("span", { html: n.body }),
+        ]),
+      ]);
+      if (hrefMatch) {
+        article.addEventListener("click", (e) => {
+          if (e.target.closest("a")) return;
+          window.open(hrefMatch[1], "_blank", "noopener");
+        });
+      }
+      newsMount.appendChild(article);
     });
   }
 

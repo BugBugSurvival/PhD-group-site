@@ -68,6 +68,7 @@ window.SITE.students = [
       { label: "Homepage", href: "https://bugbugsurvival.github.io/" },
       { label: "Scholar", href: "https://scholar.google.com/citations?user=7X554ioAAAAJ&hl=en" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/yixuan-li-phd/" },
+      { label: "Thesis", href: "https://era.ed.ac.uk/items/e4cb1ed1-bc23-4c75-be58-474c8aba92ce" },
     ],
   },
   {
